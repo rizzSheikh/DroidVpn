@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'
 }
 
 android {
@@ -63,4 +64,23 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    //koin DI
+    implementation libs.koin.android
+    implementation libs.koin.core
+    implementation libs.koin.viewmodel
+    implementation libs.koin.annotations
+    implementation libs.koin.compose
+
+    //retrofit
+    implementation libs.squareup.retrofit
+    implementation libs.retrofit.converter.gson
+
+    //one-signal VPN
+    implementation libs.onesignal
+
+    //hydra-sdk-android VPN
+    //implementation libs.hydra.sdk.android
+
+    //implementation libs.google.ipa
 }
